@@ -33,6 +33,7 @@ class ProductController {
 
         const products= await Product.findAll()
 
+        console.log(request)
         return response.json(products)
 
     }
