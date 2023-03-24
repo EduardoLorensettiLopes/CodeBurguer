@@ -19,7 +19,7 @@ routes.post('/users', UserController.store)
 
 routes.post('/sessions', SessionController.store)
 
-
+routes.use(authMiddleware) // sera chamado por todas as rotas abaixo do middlewares
 
 routes.post('/products', upload.single('file'),  ProductController.store)
 routes.get('/products', ProductController.index)
